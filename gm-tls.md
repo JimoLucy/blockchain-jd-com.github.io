@@ -126,3 +126,40 @@ peer.consensus.secure=true
 
 ```
 
+
+### JDChain Cli命令行生成测试国密证书
+
+使用`jdchain cli`命令行工具生成测试用国密双证书
+
+命令:
+
+```
+ ./jdchain-cli.sh ca test -a gmssl --org=<org> --country=<country> --locality=<locality> --province=<province> --email=<email> --out=<oupath>
+```
+
+参数说明:
+
+* -a gmssl： 生成国密测试证书，默认生成TLS证书
+* --org=<org>： 证书组织机构
+* --country=<country>：国家
+* --locality=<locality>： 所在地
+* --province=<province>： 省市
+* --email=<email>：邮箱 
+* --out=<oupath>：证书生成目录，默认为`../config/certs`
+  
+  
+
+示例:
+
+```
+  ./jdchain-cli.sh ca test --org=JD --country=CN --locality=BJ --province=BJ --email=blockchain@jd.com -a gmssl --out=/home/test/certs/sm2
+```
+  
+  
+  
+
+
+
+
+
+
